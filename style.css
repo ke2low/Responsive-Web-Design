@@ -1,0 +1,715 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    max-width: 1300px;
+    width: 100vw;
+    margin:0 auto;
+}
+
+body {
+    width: 100vw;
+    text-align:center;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding:0;
+}
+
+header {
+    background-image: url("./Assets/header-image.jpg");
+    width:100vw;
+    background-size:cover;
+    height: 600px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: 'Sirin Stencil', cursive;
+    font-size: 7.6rem;
+    font-weight: 400;
+    width: 60vw;
+    text-align:left;
+    margin-top: 2%;
+    margin-bottom: 25px;
+    color:#00476A;
+    margin-left: 20px;
+}
+
+h2 {
+    font-family: "Sirin Stencil", cursive; 
+    font-size:40px;
+    font-weight:400;
+    text-transform: uppercase;
+    color: #00476A;
+}
+
+nav {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+/* based on the sample photo I used Sirin Stencil font for the logo instead of following the style guide because it appeared to better follow the overall style of the website */
+.logo-top {
+    font-family: 'Sirin Stencil', cursive;
+    font-size: 35px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+footer p.logo-bottom {
+    font-family: 'Sirin Stencil', cursive;
+    font-size: 35px;
+    font-weight: 400;
+    color:#fff;
+    margin: 0;
+}
+
+nav ul {
+    margin-right: 13%;
+    margin-top: 35px;
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+    font-family: 'Lato', sans-serif;
+    font-size:25px;
+    font-weight:400;
+    text-transform: capitalize;
+}
+
+nav ul li {
+    padding-left: 10%;
+}
+
+nav a {
+    text-decoration: none;
+    color:#00476A;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #00C6FF;
+}
+
+.banner {
+    display:flex; 
+    flex-direction:column;
+}
+
+.shop-now {
+    font-size: 25px;
+    background-color: #00476A;
+    border: #222428 solid 1px;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    max-width: 200px;
+    margin-left: 20px;
+}
+
+.shop-now:hover {
+    background-color: #FFFFFF;
+    border:#00C6FF solid 2px;;
+    color: #222428;
+    transition-duration: 0.5s;
+}
+
+.learn-more {
+    background-color: #00476A;
+    border: #222428 2px solid;
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.learn-more:hover {
+    background-color: #FFFFFF;
+    border:#00C6FF solid 2px;;
+    color: #222428;
+    transition-duration: 0.5s;
+}
+
+.latest-blog-posts  {
+    background-color:#fff;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+}
+
+.latest-blog-posts a {
+    text-decoration: none;
+    color: #222428;
+}
+
+.latest-blog-posts a:hover {
+    color: grey;
+    transition-duration: 0.2s;
+}
+
+i {
+    font-size: 50px;
+    margin:auto;
+    font-size: 40px;
+}
+
+section.center-content {
+    max-width: 1000px;
+}
+
+.center-content .fa-chevron-left {
+    position:relative;
+    padding: auto 0px;
+    color:#0E191E;
+}
+
+.center-content .fa-chevron-right {
+    position:relative;
+    padding: auto 0px;
+    color: #0E191E;
+}
+
+section.mobileArrows {
+    display: none;
+    justify-content: center;
+    width: 120px;
+}
+
+.latest-blog-posts section.center-content {
+    width: 80vw;
+    height: 50%;
+    background-color:#fff;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.latest-blog-posts p.underline {
+    position: relative;
+    font-size: 30px;
+    bottom: 40px;
+    color:#00C6FF;
+}
+
+.latest-blog-posts button {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.latest-blog-posts h2 {
+    text-transform: none;
+    color:#0E191E;
+    text-align:center;
+    font-family: 'Lato', sans-serif;
+    font-size:30px;
+    font-weight:400;
+    letter-spacing: 1px;
+}
+
+.latest-blog-posts h3 {
+    margin-top: 0px;
+    text-transform: uppercase;
+    max-width: 390px;
+    text-align:center;
+    font-family: "Sirin Stencil", cursive; 
+    font-size:40px;
+    font-weight:400;
+    text-transform: uppercase;
+    color: #00476A;
+}
+
+.latest-blog-posts p {
+    margin: 0 15px;
+    max-width: 90%;
+    text-align:center;
+    font-size:20px;
+    line-height: 27px;
+}
+
+/* ------------------------- */
+/* latest-adventures section */
+/* ------------------------- */
+
+.latest-adventures {
+    height: 800px;
+    width: 100%;
+    padding: 100px 0px;
+    background-color:#E6F8FC;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.latest-adventures li {
+    position:relative;
+    background: #0E191E;
+    padding: 17px 30px;
+    color: white;
+    list-style:none;
+    width: 170px;
+    right: 40px;
+    bottom: 120px;
+    letter-spacing: 2px;
+}
+
+.latest-adventures img {
+    width: 350px;
+    height:350px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.latest-adventures h2 {
+    padding-top:50px;
+    color:#00476A;
+    letter-spacing: 2px;
+}
+
+/* ------------------------- */
+/* - Featured Item Section - */
+/* ------------------------- */
+.featured-item {
+    display:flex;
+    justify-content: space-around;
+    height: 800px;
+    width:100%;
+    background-color:#fff;
+    padding: 5% 9%;
+}
+
+.featured-item .itemDescription {
+    display:flex;
+    flex-direction: column;
+    margin-left: 120px;
+    padding-top: 20px;
+    max-height: 400px;
+}
+
+.featured-item img {
+    border: 1px white solid;
+    box-shadow: 45px 45px #B2E4ED;
+    height:700px;
+    width: 500px;
+    margin: 0 auto;
+    object-fit: contain;
+    position: relative;
+    bottom: 200px;
+    background: white;
+}
+
+.itemDescription h2 {
+    padding: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+    font-family: "Sirin Stencil", cursive; 
+    font-size:40px;
+    font-weight:400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00476A;
+    text-align: left;
+}
+
+.itemDescription p {
+    text-align:left;
+    max-width: 900px;
+    line-height: 25px;
+    width: 550px;
+}
+
+button.shop-now-bottom {
+    padding: 16px 16px;
+    margin-left: 0%;
+}
+
+/* ------------------------- */
+/* -------Contact Us-------- */
+/* ------------------------- */
+
+.contact-us {
+    height: 700px;
+    width: 100vw;
+    background-color:#222428;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-us h2 {
+    color: #FFF;
+    margin: 0px 0px 50px 0px;
+}
+
+footer {
+    height: 90px; 
+    width: 100%;
+    background-color:#0E191E;
+    margin:0px;
+}
+
+p.logo-bottom {
+    text-transform: uppercase;
+    padding-top: 20px;
+    height: 100%;
+}
+
+form {
+    max-width: 70vw;
+    margin: 0px auto;
+}
+
+.contact-us-container {
+    display: flex;
+    flex-direction: column;
+}
+
+section.userId {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+input[type='text'] {
+    background:#222428;
+    color:#FFFFFF;
+    border: 2px solid #00C6FF;
+    width: calc(50% - 15px);
+    height: 80px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+}
+
+input::placeholder {
+    color: white;
+    opacity:1;
+    letter-spacing: 1px;
+}
+
+#textarea {
+    background:#222428;
+    border: 2px solid #00C6FF;
+    width: 70vw;
+    height: 200px;
+    color: white;
+    padding: 20px 15px;
+    resize: none;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+textarea::-moz-placeholder { 
+    opacity: 1;
+} 
+
+.submit {
+    font-size: 25px;
+    background-color: #00476A;
+    border: #222428 solid 2px;
+    color: white;
+    padding: 11px 35px;
+    text-align: center;
+    text-decoration: none;
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+.submit:hover {
+    background-color: #FFFFFF;
+    border:#00C6FF solid 2px;;
+    color: #222428;
+    transition-duration: 0.5s;
+    }
+
+/* ------------------------- */
+/* ----- Media Queries ----- */
+/* ------------------------- */
+
+@media (max-width: 1350px) {
+
+    .latest-adventures {
+        height: 1300px;
+        padding: 0px 0px;
+    }
+
+    .latest-adventures h2 {
+        margin: 0px 0px 25px 0px;
+    }
+
+    .latest-adventures li {
+        width: 170px;
+        left: 66px;
+        bottom: 40px;
+    }
+
+    .countries {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+
+    .latest-adventures img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    
+    .latest-blog-posts p {
+        max-width: 80%;
+    }
+
+    .featured-item {
+        flex-direction: column;
+        align-items: center;
+        height: 1200px;
+    }
+
+    .featured-item img {
+        height:600px;
+        width: 450px;
+        object-fit: contain;
+        bottom: 140px;
+    }
+
+    .featured-item .itemDescription {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 0px;
+        padding-top: 0px;
+        height: 60vh;
+    }
+
+    .itemDescription {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 950px) {
+
+    form {
+        max-width: 85vw;
+    }
+
+    input[type='text'] {
+        background:#222428;
+        border: 2px solid #00C6FF;
+        width: calc(85vw);
+        height: 80px;
+        padding: 10px 15px;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    #textarea {
+        width: 85vw;
+    }
+
+    .contact-us {
+        display:flex;
+        flex-direction:column;
+    }
+
+    .latest-blog-posts  {
+        height: 610px;
+    }
+
+    nav ul {  
+        font-size:0px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    header {
+        background-image: url("./Assets/header-image.jpg");
+        background-repeat: no-repeat;
+        background-size: auto 350px;
+        height: 350px;
+        text-transform: uppercase;
+        background-position-x: -100px;
+        background-position-y: -30px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        width: 40vw;
+        margin-left: 15px;
+        margin-top: 2%;
+        margin-bottom: 25px;
+    }
+
+    p.logo-top {
+        font-size: 2rem;
+        margin-left: 15px;
+        margin-bottom:5px;
+    }
+
+    .non-mobile {
+        display:none;
+    }
+
+    section.mobileArrows {
+        display: flex;
+        justify-content: center;
+        margin:20px 50px;
+    }
+
+    .mobile {
+        margin: 0px 20px;
+    }
+
+    .mobileArrows i:hover {
+        color: grey;
+        transition-duration: 0.2s;
+    }
+
+    .latest-blog-posts p {
+        max-width:350px;
+        height: 600px
+    }
+    .latest-adventures {
+        height: 1300px;
+        padding: 0px 0px;
+    }
+
+    .latest-adventures li {
+        width: 170px;
+        left: 55px;
+        bottom: 50px;
+    }
+
+    .latest-adventures img {
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    div.container {
+        margin: 0px 0px;
+        padding: 0px 0px;
+    }
+
+    .featured-item {
+        flex-direction: column;
+        height: 950px;
+    }
+
+    .featured-item img {
+        border: 1px white solid;
+        box-shadow: 20px 20px #B2E4ED;
+        height:350px;
+        width: 250px;
+        object-fit: contain;
+        margin-left: 0px auto;
+        position: relative;
+        bottom: 140px;
+        background: white;
+    }
+
+    .itemDescription {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+        text-align: center;
+        padding: 0px 0px;
+        padding-bottom: 120px;
+    }
+
+    .featured-item {
+        padding-bottom: 40px;
+    }
+
+    .featured-item h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .featured-item p {
+        text-align:center;
+        width: 100%;
+        line-height: 27px;
+    }
+
+    .latest-blog-posts h3 {
+        font-size: 28px;
+    }
+
+    .latest-blog-posts h2 {
+        font-size: 20px;
+    }
+
+    .latest-blog-posts p {
+        font-size: 18px;
+    }
+
+    .form section.userId {
+        background:red;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #name {
+        padding: 0px 0px 6px 15px;
+    }
+
+    #email {
+        padding: 0px 0px 6px 15px;
+    }
+
+    #textarea {
+        padding: 10px 15px;
+    }
+
+    .submit {
+        padding: 17px 35px;
+    }
+
+    button.shop-now {
+        padding: 11px 12px;
+        font-size: 20px;
+    }
+
+    button.shop-now-top {
+        padding: 13px 12px;
+        font-size: 20px;
+        width: 150px;
+        margin: 0 15px;
+    }
+
+}
